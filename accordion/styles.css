@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    margin:0;
+}
+header{
+    display: grid;
+    background: linear-gradient(to right,#6E03F6, #30e892, #e8a830, #BCBE21);
+    text-align: center;
+    font-size: 1rem;
+    color:white;
+}
+.Accordion-1{
+  
+    display: grid;
+    place-items: center;
+    background-color: rgb(141, 190, 206);
+    border-radius: 10px;
+    min-height:800px;
+}
+.outerContainer{
+    display: grid;
+    gap: .5rem;   
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ff9187;
+
+
+}
+.innerContainer{
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 400px;
+    background-color: #bb6fdf;
+    color: rgb(0, 0, 0);
+}
+
+label{
+    position: relative; 
+    font-size: 1rem;
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Courier New';
+    font-weight: bold;
+    border-radius: 10px;
+}
+label::after{
+    content:"\276F";
+    font-size: 1rem;
+    position: absolute;
+    right: 2%;
+    top: 65%; 
+    transform: translateY(-50%) rotate(90deg);
+    transition: all .3s ease;
+    padding-right: 15px;
+
+}
+input{
+    display: none;
+}
+p{
+    padding: 0;
+    margin: 0px 10px 0px 10px;
+    overflow: hidden;
+    height:100px;
+    transition: all .3s ease;
+}
+
+/*----------------------- when checked-------------------------------------------------------------------------- */
+
+input:checked + label::after{
+    content:"\276F";
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%) rotate(0deg);
+}
+
+input:checked ~ p{
+    height: 0;
+    margin:0 10px 0px 10px;
+}
+input:checked ~ label{
+    background-color: lightgrey;
+    color:black;
+}
+
+
