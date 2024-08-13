@@ -41,6 +41,7 @@ header{
     color: rgb(0, 0, 0);
 }
 
+
 label{
     position: relative; 
     font-size: 1rem;
@@ -51,6 +52,7 @@ label{
     font-weight: bold;
     border-radius: 10px;
 }
+
 label::after{
     content:"\276F";
     font-size: 1rem;
@@ -67,9 +69,9 @@ input{
 }
 p{
     padding: 0;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 10px 10px;
     overflow: hidden;
-    height:100px;
+    max-height:200px;
     transition: all .3s ease;
 }
 
@@ -82,13 +84,14 @@ input:checked + label::after{
     transform: translateY(-50%) rotate(0deg);
 }
 
-input:checked ~ p{
-    height: 0;
+input:checked ~ p{              
+    max-height: 0;
     margin:0 10px 0px 10px;
 }
 input:checked ~ label{
     background-color: lightgrey;
     color:black;
 }
+
 
 
