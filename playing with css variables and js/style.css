@@ -1,0 +1,25 @@
+:root{
+    --base:rgb(231, 131, 0);
+    --spacing:10px;
+    --blur:10px;
+}
+body{
+    background: #162E3F;
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: aliceblue;
+    display: grid;
+    place-items: center;
+}
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.imageContainer{
+    padding: var(--spacing);
+    background-color:var(--base);
+    margin-top: 50px;
+}
+img{
+    filter: blur(var(--blur));
+}

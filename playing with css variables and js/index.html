@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>playing with css variable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>playing with css variabes</h1>
+    <div>
+    <label for="spacing">Spacing:</label>
+    <input id="spacing" type="range" min="10" max="100" value="2" name="spacing" data-sizing="px">
+    
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" min="0" max="25" value="1" name="blur" data-sizing="px">
+    
+    <label for="base">Base Color:</label>
+    <input id="base" type="color"  value="10" name="base" >
+    </div>
+    <div class="imageContainer">
+        <img src="./image.png" alt="german car with wings" width="400px">
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
