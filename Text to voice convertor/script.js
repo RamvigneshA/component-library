@@ -13,7 +13,15 @@ function poptVoices() {
         .join('');
 }   
 
-speechSynthesis.addEventListener('voiceschanged', poptVoices);
+
+function change(){
+    speechSynthesis.cancel();
+    speechSynthesis.speak(msg);
+}
+function setVoice(e){
+    msg.voice = voices.find(voice => voice.name ===e.target.value);
+    change();
+}
 
 stopButton.addEventListener('click', () => {
     speechSynthesis.cancel();
@@ -27,10 +35,9 @@ options.forEach(option => {
     option.addEventListener('change', e => {
         
         msg[e.target.name] = e.target.value;
+        change();
     });
 });
-voicesSelect.addEventListener('change', e => {
-    console.log(e.target.value);
-    msg.voice = voices.find(voice => voice.name ===e.target.value);
-});
- 
+
+speechSynthesis.addEventListener('voiceschanged', poptVoices);
+voicesSelect.addEventListener('change',setVoice);
