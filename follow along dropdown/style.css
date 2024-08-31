@@ -61,7 +61,7 @@ li{
 
 .background{
         position: absolute;
-        width:100px;
+        width: 100px;
         height: 100px;
         background-color: #aa5757;
         border-radius: 5px;
@@ -69,7 +69,9 @@ li{
         display: flex;
         opacity:0;
         justify-content: center;
-        transform-origin: 50% 0%;
+        transform: translateY(27px);
+        transform: translateX(-100px);
+        /*tr transform-origin: 50% 0%; */
     }
 .background .arrow{
     position: absolute;
